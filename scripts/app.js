@@ -85,3 +85,55 @@ tempElement.addEventListener("click", function(){
         weather.temperature.unit = "celsius"
     }
 });
+
+function currentTime(){
+    var date = new Date();
+    var hour = date.getHours();
+    var min = date.getMinutes();
+    var sec = date.getSeconds();
+    var dayOfWeek = date.getDay();
+    var day = date.getDate();
+    var month = date.getUTCMonth() + 1;
+    var year = date.getFullYear();
+    hour = updateTime(hour);
+    min = updateTime(min);
+    sec = updateTime(sec);
+
+    document.getElementById("clock").innerText = hour + " : " + min + " : " + sec;
+    document.getElementById("dayOfMonth").innerText = day + "." + month + "." + year;
+    document.getElementById("day").innerText = convertDay(dayOfWeek);
+    var t = setTimeout(function(){
+        currentTime() }, 1000);
+}
+
+function updateTime(k) {
+    if (k < 10) {
+      return "0" + k;
+    }
+    else {
+      return k;
+    }
+  }
+
+  function convertDay(day){
+    switch(day) {
+        case 0:
+          return "Sunday"; 
+        case 1:
+          return "Monday"
+        case 3:
+          return "Tuesday"
+        case 4:
+          return "Wednesday"; 
+        case 5:
+          return "Thursday"
+        case 5:
+          return "Fridaay"; 
+        case 6:
+          return "Saturday";
+        default:
+          return "Sunday";
+      }
+  }
+
+  currentTime();
