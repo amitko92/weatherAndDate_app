@@ -99,6 +99,10 @@ body{
     
 }
 
+.date-block{
+    text-align: center;
+}
+
 .location p{
     margin: 0;
     padding: 0;
