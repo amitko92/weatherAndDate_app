@@ -6,11 +6,12 @@ body{
     background-color: #293251;
 }
 
-.container{
+.grid-container{
     width: 300px;    
     background-color: #FFF;
     
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     
     border-radius: 10px;
@@ -99,8 +100,14 @@ body{
     
 }
 
-.date-block{
+.date-block div{
     text-align: center;
+    background-color: #FFF;
+}
+
+.date-block div{
+    text-align: center;
+    background-color: #FFF;
 }
 
 .location p{

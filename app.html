@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/font/Rimouski.css">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="s.css">
     <title>Weather App</title>
 </head>
 <body>
-    <div class="container">
-        <div class="app-title">
-            <p>Weather</p>
+    <div class="grid-container">
+        
+        <div class="place-container">
+            <div class="location">
+                <p>-</p>
+            </div> 
         </div>
-        <div class="notification"></div>
+        
         <div class="weather-container">
+            <div class="notification"></div>
+            <div class="app-title">
+                <p>Weather</p>
+            </div>
             <div class="weather-icon">
                 <img src="icons/unknown.png" alt="">
             </div>
@@ -23,11 +30,12 @@
             <div class="temperature-description">
                 <p>-</p>
             </div>
-            <div class="location">
-                <p>-</p>
-            </div> 
         </div>
+        
         <div class="date-block">
+            <div class="app-title">
+                <p>Date and Time</p>
+            </div>
             <div class="day">
                 <p id="day">Sunday</p>
             </div>
@@ -38,6 +46,7 @@
                 <p id="clock">16:55</p>
             </div>
         </div>
+
     </div>
 
     <script src="./scripts/app.js"></script>
